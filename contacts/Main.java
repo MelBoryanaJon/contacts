@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
         boolean quite = false;
-        startPhone();
+
         printAction();
         while (!quite) {
             System.out.println("Enter an option (1, 2, 3, 4 or 5)");
@@ -57,30 +57,7 @@ public class Main {
             System.out.println("Can't add, " + name +" already on file");
         }
     }
-//    private static void updateContact() {
-//        System.out.println("Enter an existing contact name : ");
-//        String name = scanner.nextLine();
-//        Contacts extContact = mobilePhone.queryContact(name);
-//        if(extContact == null)
-//        {
-//            System.out.println("Cannot found contact");
-//            return;
-//        }
-//
-//        System.out.println("Enter new contact name: ");
-//        String newName = scanner.nextLine();
-//        System.out.println("Enter new Phone Number: ");
-//        String newNumber = scanner.nextLine();
-//        String newNum = newNumber.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
-//
-//        Contacts newContact = Contacts.createContact(newName, newNum);
-//        if(mobilePhone.updateContact(extContact, newContact))
-//        {
-//            System.out.println("Contact successfully updated");
-//        }else {
-//            System.out.println("There was an error updating contact");
-//        }
-//    }
+
     private static void removeContact() {
         System.out.println("Enter existing contact name : ");
         String name = scanner.nextLine();
@@ -112,9 +89,6 @@ public class Main {
     }
 
 
-    private static void startPhone() {
-        System.out.println("Starting Phone . . .");
-    }
     private static void printAction() {
         System.out.println("\nSelect from the available options: ");
         System.out.println(
