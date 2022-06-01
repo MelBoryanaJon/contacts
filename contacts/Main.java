@@ -18,32 +18,26 @@ public class Main {
             scanner.nextLine();
 
             switch (action) {
-                case 0:
-
-                    System.out.println("\n Exit");
-                    quite = true;
-                    break;
-
                 case 1:
                     mobilePhone.printContacts();
                     break;
 
-                case 2:
-                    addNewContact();
-                    break;
+                    case 2:
+                        addNewContact();
+                        break;
 
                 case 3:
-                    updateContact();
+                    queryContact();
                     break;
+
                 case 4:
                     removeContact();
                     break;
                 case 5:
-                    queryContact();
+                    System.out.println("Exit");
+                    quite = true;
                     break;
-                case 6:
-                    printAction();
-                    break;
+
 
 
             }
@@ -76,6 +70,7 @@ public class Main {
         String newName = scanner.nextLine();
         System.out.println("Enter new Phone Number: ");
         String newNumber = scanner.nextLine();
+        String newNum = newNumber.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
 
         Contacts newContact = Contacts.createContact(newName, newNumber);
         if(mobilePhone.updateContact(extContact, newContact))
