@@ -52,7 +52,7 @@ public class Main {
         String number = phone.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
         Contacts newContact = Contacts.createContact(name, number);
         if(mobilePhone.addNewContact(newContact)) {
-            System.out.println("New Contact Added: "+ name + " | " + phone );
+            System.out.println("New Contact Added: "+ name + " | " + number);
         }else {
             System.out.println("Can't add, " + name +" already on file");
         }
